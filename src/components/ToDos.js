@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
     
   render() {
     return this.props.todos.map((todo) =>(
-         <TodoItem checkboxClick = {this.props.checkboxClick} key={todo.id} todo={todo}/>
+         <TodoItem delTodo = {this.props.delTodo} checkboxClick = {this.props.checkboxClick} key={todo.id} todo={todo}/>
       ));
   }
 }

@@ -24,6 +24,7 @@ class App extends Component {
     ]
   }
 
+  //Toogle Complete 
   checkboxClick = (id) =>{
     this.setState({todos: this.state.todos.map(todo => {
       if (todo.id === id) {
@@ -31,12 +32,17 @@ class App extends Component {
       }
       return todo;
     })})
-  } 
+  }
+  
+  delTodo = (id) =>{
+    this.setState({todos: [...this.state.todos.filter(todo => todo.id !== id)]});
+  }
+
   render(){
   return (
     <div className="App">
     <h1>APP</h1>
-    <Todos checkboxClick = {this.checkboxClick} todos = {this.state.todos}/>
+    <Todos delTodo = {this.delTodo} checkboxClick = {this.checkboxClick} todos = {this.state.todos}/>
     </div>
   );
 }
