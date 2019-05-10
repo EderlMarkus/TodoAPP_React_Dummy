@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './App.css';
 import Todos from './components/ToDos.js';
+import Header from './components/layout/Header.js';
+import AddTodo from './components/AddTodo.js';
 
 class App extends Component {
   state = {
@@ -40,9 +42,12 @@ class App extends Component {
 
   render(){
   return (
-    <div className="App">
-    <h1>APP</h1>
+    <div className = "App">
+    <div className = "container">
+    <Header />
+    <AddTodo />
     <Todos delTodo = {this.delTodo} checkboxClick = {this.checkboxClick} todos = {this.state.todos}/>
+    </div>
     </div>
   );
 }
