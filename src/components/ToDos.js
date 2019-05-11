@@ -13,7 +13,10 @@ import PropTypes from 'prop-types';
 
 //PropTypes
 ToDos.propTypes = {
-    todos: PropTypes.array.isRequired
+    todos: PropTypes.array.isRequired,
+    checkboxClick: PropTypes.func.isRequired,
+    delTodo: PropTypes.func.isRequired,
+
 }
 
 export default ToDos;
